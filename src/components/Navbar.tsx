@@ -3,9 +3,6 @@ import { NavLink, Link } from 'react-router-dom';
 import { 
   Receipt, 
   PlusCircle, 
-  Bot, 
-  Database, 
-  CheckCircle2, 
   Menu, 
   X,
   Compass
@@ -15,7 +12,7 @@ export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
-    `inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
+    `inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
       isActive
         ? 'bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-600 text-white shadow-md shadow-purple-900/50 border border-purple-400/40 text-neon-glow'
         : 'text-purple-200/80 hover:text-white hover:bg-purple-900/40 border border-transparent'
@@ -51,8 +48,8 @@ export const Navbar: React.FC = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1.5" aria-label="Main Navigation">
+          {/* Desktop Navigation - Pure Trip Splitter */}
+          <nav className="hidden md:flex items-center gap-2" aria-label="Main Navigation">
             <NavLink to="/" end className={navLinkClasses}>
               <Receipt className="w-4 h-4 text-purple-300" />
               <span>Expenses</span>
@@ -60,24 +57,7 @@ export const Navbar: React.FC = () => {
 
             <NavLink to="/expenses/new" className={navLinkClasses}>
               <PlusCircle className="w-4 h-4 text-purple-300" />
-              <span>Add expense</span>
-            </NavLink>
-
-            <div className="h-5 w-px bg-purple-500/20 mx-2" aria-hidden="true" />
-
-            <NavLink to="/recruiter-bot" className={navLinkClasses} title="Section B: RecruiterBot Matching">
-              <Bot className="w-4 h-4 text-emerald-400" />
-              <span>RecruiterBot</span>
-            </NavLink>
-
-            <NavLink to="/sql-detective" className={navLinkClasses} title="Section B: SQL Detective Challenge">
-              <Database className="w-4 h-4 text-sky-400" />
-              <span>SQL Detective</span>
-            </NavLink>
-
-            <NavLink to="/qa-suite" className={navLinkClasses} title="Section A: Playwright QA Tests">
-              <CheckCircle2 className="w-4 h-4 text-amber-400" />
-              <span>QA Suite</span>
+              <span>+ Add Expense</span>
             </NavLink>
           </nav>
 
@@ -115,36 +95,7 @@ export const Navbar: React.FC = () => {
             className={mobileNavLinkClasses}
           >
             <PlusCircle className="w-4 h-4 text-purple-300" />
-            <span>Add expense</span>
-          </NavLink>
-
-          <div className="h-px bg-purple-500/20 my-2" />
-
-          <NavLink
-            to="/recruiter-bot"
-            onClick={() => setMobileMenuOpen(false)}
-            className={mobileNavLinkClasses}
-          >
-            <Bot className="w-4 h-4 text-emerald-400" />
-            <span>RecruiterBot (Section B)</span>
-          </NavLink>
-
-          <NavLink
-            to="/sql-detective"
-            onClick={() => setMobileMenuOpen(false)}
-            className={mobileNavLinkClasses}
-          >
-            <Database className="w-4 h-4 text-sky-400" />
-            <span>SQL Detective (Section B)</span>
-          </NavLink>
-
-          <NavLink
-            to="/qa-suite"
-            onClick={() => setMobileMenuOpen(false)}
-            className={mobileNavLinkClasses}
-          >
-            <CheckCircle2 className="w-4 h-4 text-amber-400" />
-            <span>QA Suite (Section A)</span>
+            <span>+ Add Expense</span>
           </NavLink>
         </div>
       )}

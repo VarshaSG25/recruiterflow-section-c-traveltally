@@ -4,9 +4,6 @@ import { Navbar } from './components/Navbar.js';
 import { AestheticBackground } from './components/AestheticBackground.js';
 import { ExpensesPage } from './pages/ExpensesPage.js';
 import { AddExpensePage } from './pages/AddExpensePage.js';
-import { RecruiterBotPage } from './pages/RecruiterBotPage.js';
-import { SqlDetectivePage } from './pages/SqlDetectivePage.js';
-import { QaSuitePage } from './pages/QaSuitePage.js';
 import { NotFoundPage } from './pages/NotFoundPage.js';
 
 export const App: React.FC = () => {
@@ -21,15 +18,11 @@ export const App: React.FC = () => {
 
         <div className="flex-1">
           <Routes>
-            {/* Section C: TravelTally Core Expense Routes */}
+            {/* Section C: TravelTally Core Trip Splitter Routes */}
             <Route path="/" element={<ExpensesPage />} />
             <Route path="/expenses" element={<ExpensesPage />} />
             <Route path="/expenses/new" element={<AddExpensePage />} />
-
-            {/* Section B & Section A Showcase Routes */}
-            <Route path="/recruiter-bot" element={<RecruiterBotPage />} />
-            <Route path="/sql-detective" element={<SqlDetectivePage />} />
-            <Route path="/qa-suite" element={<QaSuitePage />} />
+            <Route path="/add" element={<AddExpensePage />} />
 
             {/* Fallback 404 Route */}
             <Route path="*" element={<NotFoundPage />} />
@@ -45,7 +38,7 @@ export const App: React.FC = () => {
               </span>
             </div>
             <p className="text-purple-300/80">
-              © 2026 Recruiterflow Full Stack Developer Take-Home Submission
+              Trip Splitter Web Application • Section C
             </p>
           </div>
         </footer>
