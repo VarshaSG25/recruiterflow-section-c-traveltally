@@ -1,6 +1,7 @@
-# Trip Splitter — Frontend Developer Assignment
+# TravelTally — Trip Splitter (Section C)
+> **Track • Split • Travel** — Feature-complete shared expense tracker with zero-loss paisa arithmetic, velvet purple glassmorphism, and dynamic 3D travel vector canvas.
 
-A React and Redux Toolkit expense splitting application built with strict TypeScript for **Section C** of the Recruiterflow Take-Home Assignment.
+Built with React 18, Redux Toolkit, strict TypeScript (`"strict": true`), Tailwind CSS, and Vitest for **Section C** of the Recruiterflow Take-Home Assignment.
 
 ---
 
@@ -12,7 +13,6 @@ A React and Redux Toolkit expense splitting application built with strict TypeSc
 
 ### Installation & Development
 ```bash
-cd frontend
 npm install
 npm run dev
 ```
